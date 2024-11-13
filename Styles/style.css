@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+}
+div > div{
+    display: inline-block;
+    border: solid ;
+    border-width: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 50px;
+    width: 150px;
+    height: 100px;
+}
+h2 {
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+div.hover {
+
+}
