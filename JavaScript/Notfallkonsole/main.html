@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <title>Notfallkonsole</title>
+</head>
+<body>
+    <h1>Notfallkonsole</h1>
+
+    <div id="antrieb">
+        <h2>Antrieb</h2>
+        <br>
+        <a id="schalter-antrieb" href="">Abschalten!</a>                                                                                                                                                                                                                                                                                          
+    </div>
+    <div id="holodeck">
+        <h2>Holodeck</h2>
+        <br>
+        <a id="schalter-holodeck" href="">Abschalten!</a>
+    </div>
+    <div id="hitzeschild">
+        <h2>Hitzeschild</h2>
+        <br>
+        <a id="schalter-hitzeschild" href="">Abschalten!</a>
+    </div>
+    <div id="transport">
+        <h2>Transport</h2>
+        <br>
+        <a id="schalter-transport" href="#">Abschalten!</a>
+    </div>
+ 
+    <script>
+          
+        function schalterAn (e) {
+            //console.log("an");
+           // console.log(e.target);
+           // e.target.parentElement.style.color = "red";
+            e.target.parentElement.classList.add("hover");
+        }
+
+
+        function schalterAb (e) {
+           // console.log("ab");
+           // e.target.parentElement.style.color = "white";
+           e.target.parentElement.classList.remove("hover");
+        }
+
+
+        function initialize () {
+            
+            var schalter = new Array();
+            schalter[0] = "antrieb";
+            schalter[1] = "holodeck";
+            schalter[2] = "hitzeschild";
+            schalter[3] = "transport";
+           
+            for (var i = 0; i < schalter.length; i++) {
+
+             //   console.log(schalter[i]); 
+                
+                document.getElementById("schalter-" + schalter[i]).addEventListener("mouseover", schalterAn);
+                document.getElementById("schalter-" + schalter[i]).addEventListener("mouseout", schalterAb);           
+            }
+        }
+
+        window.addEventListener("load", initialize);
+    </script>
+</body>
+</html>
